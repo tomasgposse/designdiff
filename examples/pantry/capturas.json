@@ -1,0 +1,112 @@
+[
+  {
+    "hash": "a1b2c3d000000000000000000000000000000000",
+    "short": "a1b2c3d",
+    "mode": "start",
+    "error": null,
+    "shots": [
+      {
+        "name": "list",
+        "route": "/",
+        "file": "capturas/a1b2c3d-list.png",
+        "hash": "5e94b7a11bea36a5cb2458a2c2a1cf92",
+        "missedSteps": []
+      },
+      {
+        "name": "add",
+        "route": "/",
+        "file": "capturas/a1b2c3d-add.png",
+        "hash": "4b407da2a8dda248e382253873723d4e",
+        "missedSteps": []
+      }
+    ]
+  },
+  {
+    "hash": "b2c3d4e000000000000000000000000000000000",
+    "short": "b2c3d4e",
+    "mode": "start",
+    "error": null,
+    "shots": [
+      {
+        "name": "list",
+        "route": "/",
+        "file": "capturas/b2c3d4e-list.png",
+        "hash": "9f0d6e9db28ea6e9719aef6015faeeeb",
+        "missedSteps": []
+      },
+      {
+        "name": "add",
+        "route": "/",
+        "file": "capturas/b2c3d4e-add.png",
+        "hash": "b01327ea570e2472bbf98c36160b0739",
+        "missedSteps": []
+      }
+    ]
+  },
+  {
+    "hash": "c3d4e5f000000000000000000000000000000000",
+    "short": "c3d4e5f",
+    "mode": "start",
+    "error": null,
+    "shots": [
+      {
+        "name": "list",
+        "route": "/",
+        "file": "capturas/c3d4e5f-list.png",
+        "hash": "81e2521e0ad48d82e946628a65e08192",
+        "missedSteps": []
+      },
+      {
+        "name": "add",
+        "route": "/",
+        "file": "capturas/c3d4e5f-add.png",
+        "hash": "acb40192afaf79c8cda9ae22ee847f12",
+        "missedSteps": []
+      }
+    ]
+  },
+  {
+    "hash": "d4e5f6a000000000000000000000000000000000",
+    "short": "d4e5f6a",
+    "mode": "start",
+    "error": null,
+    "shots": [
+      {
+        "name": "list",
+        "route": "/",
+        "file": "capturas/d4e5f6a-list.png",
+        "hash": "fd6633668d8aa967943892f3f254a396",
+        "missedSteps": []
+      },
+      {
+        "name": "add",
+        "route": "/",
+        "file": "capturas/d4e5f6a-add.png",
+        "hash": "acb40192afaf79c8cda9ae22ee847f12",
+        "missedSteps": []
+      }
+    ]
+  },
+  {
+    "hash": "e5f6a7b000000000000000000000000000000000",
+    "short": "e5f6a7b",
+    "mode": "start",
+    "error": null,
+    "shots": [
+      {
+        "name": "list",
+        "route": "/",
+        "file": "capturas/e5f6a7b-list.png",
+        "hash": "58087290499a7ac7b532bebe57af1478",
+        "missedSteps": []
+      },
+      {
+        "name": "add",
+        "route": "/",
+        "file": "capturas/e5f6a7b-add.png",
+        "hash": "e53af130c650875df7430d0fc2f948ba",
+        "missedSteps": []
+      }
+    ]
+  }
+]

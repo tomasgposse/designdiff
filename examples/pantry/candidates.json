@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "project": "pantry",
+    "note": "Fictional example data"
+  },
+  "commits": [
+    {
+      "hash": "a1b2c3d000000000000000000000000000000000",
+      "short": "a1b2c3d",
+      "ts": "2026-03-02T16:00:00Z",
+      "subject": "First version: weekly meal planner with recipes",
+      "files": 3,
+      "uiFiles": 3,
+      "add": 479,
+      "del": 0,
+      "top": [
+        {
+          "path": "app/plan/page.tsx",
+          "add": 214,
+          "del": 0
+        },
+        {
+          "path": "app/recipes/new/page.tsx",
+          "add": 168,
+          "del": 0
+        },
+        {
+          "path": "lib/ingredients.ts",
+          "add": 97,
+          "del": 0
+        }
+      ]
+    },
+    {
+      "hash": "b2c3d4e000000000000000000000000000000000",
+      "short": "b2c3d4e",
+      "ts": "2026-03-03T19:20:00Z",
+      "subject": "Cut the planner: a shared shopping list only",
+      "files": 3,
+      "uiFiles": 3,
+      "add": 132,
+      "del": 430,
+      "top": [
+        {
+          "path": "app/page.tsx",
+          "add": 132,
+          "del": 48
+        },
+        {
+          "path": "app/plan/page.tsx",
+          "add": 0,
+          "del": 214
+        },
+        {
+          "path": "app/recipes/new/page.tsx",
+          "add": 0,
+          "del": 168
+        }
+      ]
+    },
+    {
+      "hash": "c3d4e5f000000000000000000000000000000000",
+      "short": "c3d4e5f",
+      "ts": "2026-03-08T13:45:00Z",
+      "subject": "Quick add: one field that parses quantities, plus recent items",
+      "files": 3,
+      "uiFiles": 3,
+      "add": 185,
+      "del": 143,
+      "top": [
+        {
+          "path": "app/add/quick-add.tsx",
+          "add": 121,
+          "del": 0
+        },
+        {
+          "path": "lib/parse-item.ts",
+          "add": 64,
+          "del": 0
+        },
+        {
+          "path": "app/add/item-form.tsx",
+          "add": 0,
+          "del": 143
+        }
+      ]
+    },
+    {
+      "hash": "d4e5f6a000000000000000000000000000000000",
+      "short": "d4e5f6a",
+      "ts": "2026-03-12T17:30:00Z",
+      "subject": "Show who asked for each item and who bought it",
+      "files": 3,
+      "uiFiles": 3,
+      "add": 117,
+      "del": 18,
+      "top": [
+        {
+          "path": "app/components/item-row.tsx",
+          "add": 58,
+          "del": 12
+        },
+        {
+          "path": "lib/members.ts",
+          "add": 41,
+          "del": 0
+        },
+        {
+          "path": "app/page.tsx",
+          "add": 18,
+          "del": 6
+        }
+      ]
+    },
+    {
+      "hash": "e5f6a7b000000000000000000000000000000000",
+      "short": "e5f6a7b",
+      "ts": "2026-03-18T12:00:00Z",
+      "subject": "Warm visual identity and a daily summary instead of push notifications",
+      "files": 3,
+      "uiFiles": 3,
+      "add": 185,
+      "del": 128,
+      "top": [
+        {
+          "path": "app/theme.css",
+          "add": 96,
+          "del": 40
+        },
+        {
+          "path": "lib/notifications.ts",
+          "add": 52,
+          "del": 88
+        },
+        {
+          "path": "app/components/summary-toggle.tsx",
+          "add": 37,
+          "del": 0
+        }
+      ]
+    }
+  ],
+  "candidates": []
+}

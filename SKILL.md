@@ -57,7 +57,7 @@ Runs the app at every commit that touched the UI, in a separate git worktree, an
 
 ### 4. Curate
 
-This step is yours, the agent's. **First read [`docs/teoria.md`](docs/teoria.md)**: it explains how to classify each decision. Then read `candidates.json` and write `<out>/moments.json`:
+This step is yours, the agent's. **First read [`docs/theory.md`](docs/theory.md)**: it explains how to classify each decision. Then read `candidates.json` and write `<out>/moments.json`:
 
 ```json
 {

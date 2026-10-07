@@ -1,13 +1,17 @@
 # Marcos para leer un proceso de diseño
 
+[English](theory.md)
+
 designdiff usa cuatro marcos para analizar cada decisión. No son decoración: cada uno responde una pregunta distinta sobre el proceso, y juntos permiten leerlo como un todo, no solo como una lista de cambios.
 
 | Marco | Pregunta que responde | Campo en `moments.json` |
 |---|---|---|
-| Design rationale (QOC) | ¿Qué se decidía, entre qué opciones y con qué criterio? | `question`, `ai`, `decision`, `criteria` |
+| Design rationale (QOC) | ¿Qué se decidía, entre qué opciones y con qué criterio? | `question`, `direction`, `ai`, `decision`, `criteria` |
 | Práctica reflexiva | ¿Cambió el problema o solo la solución? | `move` |
 | Doble diamante | ¿En qué etapa del proceso estaba? | `phase` |
 | Seis sombreros | ¿Desde qué tipo de pensamiento se decidió? | `hat` |
+
+Los valores de `move`, `phase` y `hat` se pueden escribir en español (como en esta guía) o en inglés (`reframe`, `define`, `yellow`…).
 
 Una regla para todos: **se clasifica a partir de lo que la persona dijo, no de lo que supongamos que pensó.** Si la evidencia no alcanza para clasificar, el campo queda vacío. Un campo vacío es más honesto que uno inventado.
 
@@ -37,7 +41,7 @@ Una regla para todos: **se clasifica a partir de lo que la persona dijo, no de l
 **Para qué sirve acá.** Distingue dos tipos de decisión que pesan muy distinto:
 
 - **`reencuadre`**: la decisión cambia **qué problema** se está resolviendo. "No es una app para registrar gastos, es una app para no tener que registrarlos." Después de un reencuadre, parte del trabajo anterior deja de servir.
-- **`ajuste`**: la decisión mejora **la solución** dentro del mismo problema. "El saldo no se lee sobre el degradé."
+- **`ajuste`**: la decisión mejora **la solución** dentro del mismo problema. "El número principal no se lee sobre ese fondo."
 
 **Cómo aplicarlo.** Preguntate: si esta decisión no se hubiera tomado, ¿la IA seguiría resolviendo el mismo problema, solo que peor? Si sí, es un ajuste. Si estaría resolviendo otro problema, es un reencuadre.
 
@@ -68,11 +72,11 @@ Una regla para todos: **se clasifica a partir de lo que la persona dijo, no de l
 
 | `hat` | Modo | Se reconoce en frases como… |
 |---|---|---|
-| `blanco` | Datos e información: qué sabemos, qué falta | "Mercado Pago no devuelve ese dato", "la API solo trae los últimos 90 días" |
+| `blanco` | Datos e información: qué sabemos, qué falta | "la API no devuelve ese dato", "solo trae los últimos 90 días" |
 | `rojo` | Intuición y emoción, sin justificar | "no me gusta", "se siente genérico", "no me cierra" |
-| `negro` | Riesgo y cautela: qué puede salir mal | "queda vulnerable mi información", "todavía no quiero que entre nadie" |
+| `negro` | Riesgo y cautela: qué puede salir mal | "quedan expuestos mis datos", "todavía no quiero que entre nadie" |
 | `amarillo` | Valor y beneficio: por qué conviene | "así no tenés que cargar nada", "esto hace que escale a más gente" |
-| `verde` | Creatividad y alternativas | "¿y si en vez de vincular cada banco…?", "capaz con un onboarding corto" |
+| `verde` | Creatividad y alternativas | "¿y si en vez de conectar cada cuenta…?", "capaz con un onboarding corto" |
 | `azul` | Proceso y prioridades: qué hacer primero | "primero que funcione", "eso lo dejamos para después" |
 
 **Cómo aplicarlo.** Un solo sombrero por decisión: el que **mejor explica el porqué**. Si la persona propone una alternativa por miedo a un riesgo, el sombrero es `negro` (el motivo), no `verde` (la forma).

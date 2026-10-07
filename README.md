@@ -6,6 +6,12 @@ Anyone can build a good-looking app in an afternoon with AI. So the finished pro
 
 `designdiff` reads your sessions with AI coding agents (Claude Code and Codex) and your git history. It finds the moments where you corrected, cut or reframed what the AI proposed, and builds a timeline with screenshots of the app before and after each decision. Design, product and code decisions all count.
 
+![designdiff page for Pantry, a fictional example: cover, and the evolution of each screen with what changed in every version](docs/example.png)
+
+![One decision in three steps: my direction, what the AI did and my decision, with the before and after of the screen](docs/example-decision.png)
+
+*Pantry is a fictional project made to show the output. Its data lives in [`examples/pantry`](examples/pantry): open `proceso.html` in a browser, or regenerate it with `node src/render.mjs examples/pantry`.*
+
 ## What it does
 
 - Reads a project's **Claude Code** and **Codex** sessions, even if you used both.
@@ -13,7 +19,7 @@ Anyone can build a good-looking app in an afternoon with AI. So the finished pro
 - For each decision, shows three steps: **your direction** (brief, references, the problem you spotted), **what the AI did** and **what you decided**. It tells the story of the collaboration, not a summary of what the AI built.
 - Runs your app at every commit that touched the UI, in a separate copy, and takes screenshots.
 - When a decision doesn't show on screen (an architecture or dependency call, say), it shows the code that changed instead.
-- Analyzes every decision with four design frameworks: design rationale (what was being decided and by which criteria), reflective practice (did it reframe the problem or adjust the solution), the Double Diamond (which phase) and the Six Thinking Hats (which kind of thinking drove it). See [`docs/teoria.md`](docs/teoria.md).
+- Analyzes every decision with four design frameworks: design rationale (what was being decided and by which criteria), reflective practice (did it reframe the problem or adjust the solution), the Double Diamond (which phase) and the Six Thinking Hats (which kind of thinking drove it). See [`docs/theory.md`](docs/theory.md).
 - Generates an HTML page that opens with **"How it was thought through"**: the criteria that repeat across decisions (your real design principles), reframes vs. adjustments, the path through the Double Diamond and the thinking profile. Then the timeline, ready to use as the base for a case study.
 
 ## What it doesn't do
@@ -60,6 +66,8 @@ Hoy cualquiera puede construir una app linda en una tarde con IA. Por eso el pro
 
 `designdiff` lee tus sesiones con agentes de IA (Claude Code y Codex) y tu historial de git. Encuentra los momentos en que corregiste, recortaste o redefiniste lo que proponía la IA, y arma una línea de tiempo con capturas de cómo se veía la app antes y después de cada decisión. Cuentan las decisiones de diseño, de producto y de código.
 
+Las capturas de arriba muestran el resultado con **Pantry**, un proyecto ficticio armado para el ejemplo. Sus datos están en [`examples/pantry`](examples/pantry).
+
 ### Qué hace
 
 - Lee las sesiones de **Claude Code** y **Codex** de un proyecto, aunque hayas usado las dos.
@@ -67,7 +75,7 @@ Hoy cualquiera puede construir una app linda en una tarde con IA. Por eso el pro
 - Para cada decisión, muestra tres pasos: **tu dirección** (brief, referencias, el problema que detectaste), **lo que hizo la IA** y **lo que decidiste vos**. Cuenta el trabajo en conjunto, no un resumen de lo que construyó la IA.
 - Levanta tu app en cada commit con cambios de UI, en una copia aparte, y saca capturas.
 - Si la decisión no se ve en pantalla (por ejemplo, de arquitectura o de dependencias), muestra el código que cambió.
-- Analiza cada decisión con cuatro marcos de diseño: design rationale (qué se decidía y con qué criterio), práctica reflexiva (si reencuadró el problema o ajustó la solución), doble diamante (en qué fase) y seis sombreros (desde qué tipo de pensamiento). Están explicados en [`docs/teoria.md`](docs/teoria.md).
+- Analiza cada decisión con cuatro marcos de diseño: design rationale (qué se decidía y con qué criterio), práctica reflexiva (si reencuadró el problema o ajustó la solución), doble diamante (en qué fase) y seis sombreros (desde qué tipo de pensamiento). Están explicados en [`docs/teoria.md`](docs/teoria.md) (en inglés: [`docs/theory.md`](docs/theory.md)).
 - Genera una página HTML que arranca con **"Cómo se pensó"**: los criterios que se repiten entre decisiones (tus principios de diseño reales), reencuadres contra ajustes, el recorrido por el doble diamante y el perfil de pensamiento. Después, la línea de tiempo, lista para usar como base de un caso de estudio.
 
 ### Qué no hace

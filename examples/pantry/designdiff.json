@@ -1,0 +1,7 @@
+{
+  "size": [390, 844],
+  "screens": [
+    { "name": "list", "route": "/" },
+    { "name": "add", "route": "/", "steps": [{ "click": ["Add", "+"] }] }
+  ]
+}

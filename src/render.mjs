@@ -27,9 +27,9 @@ const STRINGS = {
     evoSub: (k, n) => `${k} changes across ${n} versions. Only the versions where the screen changed are shown.`,
     readLabel: '02 — Reading', readTitle: 'How it was thought through',
     momentsLabel: '03 — Decisions', momentsTitle: 'My direction, the AI’s execution and my judgment',
-    criteria: 'Repeated criteria', hats: 'Thinking modes',
+    criteria: 'Repeated criteria', hatsLabel: 'Thinking modes',
     diamond: 'Path through the Double Diamond · each dot is a decision, in order · large dots are reframes',
-    method: 'Classified with design rationale, reflective practice, the Double Diamond and the Six Thinking Hats. See docs/teoria.md.',
+    method: 'Classified with design rationale, reflective practice, the Double Diamond and the Six Thinking Hats. See docs/theory.md.',
     footer: 'Generated with designdiff from AI agent sessions and git history.',
     rDirected: (d, n) => `In <b>${d} of ${n}</b> decisions the direction came from me before the AI acted: the AI built and proposed options, and I chose or corrected.`,
     rCriteria: (c, k, n) => `The criterion that repeats the most is <b>${c}</b>: it shows up in ${k} of ${n} decisions.`,
@@ -52,7 +52,7 @@ const STRINGS = {
     evoSub: (k, n) => `${k} cambios en ${n} versiones. Solo se muestran las versiones donde la pantalla cambió.`,
     readLabel: '02 — Lectura', readTitle: 'Cómo se pensó',
     momentsLabel: '03 — Decisiones', momentsTitle: 'Mi dirección, la ejecución de la IA y mi criterio',
-    criteria: 'Criterios que se repiten', hats: 'Modos de pensamiento',
+    criteria: 'Criterios que se repiten', hatsLabel: 'Modos de pensamiento',
     diamond: 'Recorrido por el doble diamante · cada punto es una decisión, en orden · los grandes son reencuadres',
     method: 'Clasificación según design rationale, práctica reflexiva, doble diamante y seis sombreros. Ver docs/teoria.md.',
     footer: 'Generado con designdiff a partir de sesiones con agentes de IA y del historial de git.',
@@ -223,7 +223,8 @@ if (moments.some((m) => m.hat || m.phase || m.move || m.criteria?.length)) {
   if (principles.length) reading.push(T.rCriteria(esc(principles[0][0]), principles[0][1], n));
   if (moves.reencuadre) reading.push(T.rMoves(moves.reencuadre, moves.ajuste || 0));
   if (hats.length) {
-    reading.push(T.rHat(HATS[hats[0][0]]?.label.toLowerCase(), hats[0][1], n));
+    // Solo se nombra un modo dominante si gana claramente, sin empate.
+    if (hats[0][1] > 1 && hats[0][1] > (hats[1]?.[1] || 0)) reading.push(T.rHat(HATS[hats[0][0]]?.label.toLowerCase(), hats[0][1], n));
     if (!hats.some(([h]) => h === 'blanco')) reading.push(T.rNoData);
   }
   if (seq.length && !seq.some((m) => m.phase === 'descubrir')) reading.push(T.rNoDiscover);
@@ -235,7 +236,7 @@ if (moments.some((m) => m.hat || m.phase || m.move || m.criteria?.length)) {
     <ul class="reading">${reading.map((r) => `<li>${r}</li>`).join('')}</ul>
     <div class="ov-grid">
       ${principles.length ? `<div class="panel"><p class="label">${T.criteria}</p><ul class="bars">${principles.map(([k, v]) => `<li><span>${esc(k)}</span><b style="--w:${(v / n) * 100}%"></b><em>${v}</em></li>`).join('')}</ul></div>` : ''}
-      ${hats.length ? `<div class="panel"><p class="label">${T.hats}</p><ul class="bars">${hats.map(([k, v]) => `<li><span><i class="hat" style="background:${HATS[k]?.color}"></i>${HATS[k]?.label || k}</span><b style="--w:${(v / n) * 100}%;--c:${HATS[k]?.color}"></b><em>${v}</em></li>`).join('')}</ul></div>` : ''}
+      ${hats.length ? `<div class="panel"><p class="label">${T.hatsLabel}</p><ul class="bars">${hats.map(([k, v]) => `<li><span><i class="hat" style="background:${HATS[k]?.color}"></i>${HATS[k]?.label || k}</span><b style="--w:${(v / n) * 100}%;--c:${HATS[k]?.color}"></b><em>${v}</em></li>`).join('')}</ul></div>` : ''}
       ${diamond ? `<div class="panel wide"><p class="label">${T.diamond}</p>${diamond}</div>` : ''}
     </div>
     <p class="mono note">${T.method}</p>
